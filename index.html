@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Fira Sans', sans-serif;
+        }
+
+        header {
+            background-color: #AEEFDC;
+        }
+
+        .logo {
+            float: right;
+            border-radius: 50%;
+        }
+
+        .dosel {
+            float: right;
+            margin-right: 35%;
+        }
+
+
+        header {
+            padding: 30px;
+            padding-bottom: 35px;
+        }
+
+        nav div {
+            display: inline-block;
+            padding: 15px;
+            margin: 0;
+        }
+
+        .d1 {
+            width: 12%;
+            background-color: #F3E3D7;
+        }
+
+        .d2 {
+            width: 12%;
+            background-color: #E8C2FF;
+        }
+
+        .d3 {
+            width: 12%;
+            background-color: #ABF5F5;
+        }
+
+        .d4 {
+            width: 9%;
+            background-color: #A8F4B5;
+        }
+
+        .d5 {
+            width: 9%;
+            background-color: #FABFD4;
+        }
+
+        .d6 {
+            width: 9%;
+            background-color: #F8F2C1;
+        }
+
+        .d7 {
+            width: 15%;
+            background-color: #B3FBEA;
+        }
+
+        .d8 {
+            width: 13%;
+            background-color: #DDF49C;
+        }
+
+        .d9 {
+            width: 6.3%;
+            background-color: #9EB3FB;
+        }
+
+        .div4 div {
+            float: right;
+            border-radius: 5px;
+            width: 20%;
+            margin: 2.5%;
+            padding: 10px;
+        } 
+        .c1 {
+            background-color: #DDF49C;
+        }
+        .c2 {
+            background-color: #99b1ff;
+        }
+        .c3 {
+            background-color: #E8C2FF;
+        }
+        .c4 {
+            background-color: #DDF49C;
+        }
+        .piechart {
+            padding: 10px;
+            margin-left: 34%;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            background-image: conic-gradient(#5CE1E6 0deg, #5CE1E6 122.5deg, #2BB4D4 122.5deg, #2BB4D4 250.3deg, #1787B4 250.3deg,  #1787B4 360deg);            
+        }
+        .space {
+            height: 200px;
+        }
+
+        h2, h3 {
+            margin: 20px;
+        }
+
+        .legpie {
+            float: right;
+            width: 20%;
+        }
+
+        .space2 {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(265%, -150%);
+        }
+        .legpie div { 
+            display: inline-block;
+            width: 25px;
+            height: 18px;
+            vertical-align: middle;
+        }
+        .color1 {
+            background-color: #5CE1E6;
+        }
+        .legpie h4 {
+            margin-bottom: 10px;
+        }
+        .color2 {
+            background-color: #2BB4D4;
+        }
+        .color3 {
+            background-color: #1787B4;
+        }
+        .color4 {
+            background-color: #ff4069;
+        }
+        .color5 {
+            background-color: #059BFF;
+        }
+        .color6 {
+            background-color: #FFC234;
+        }
+        .douchart {
+            padding: 10px;
+            margin-left: 34%;
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            background-image: conic-gradient(#ff4069 0deg, #ff4069 118.5deg, #059BFF 118.5deg, #059BFF 255deg, #FFC234 255deg,  #FFC234 360deg);
+        }
+        .space3 {
+            width: 15%;
+            height: 20px;
+            position: absolute;
+            background-color: white;
+            transform: translate(400%, -100%);
+        }
+        .marks1 {
+            position: absolute;
+            transform: translate(1200%, 500%);
+        }
+        .marks2 {
+            position: absolute;
+            transform: translate(500%, 2300%);
+        }
+        .marks3 {
+            position: absolute;
+            transform: translate(220%, 500%);
+        }
+        .marks4 {
+            position: absolute;
+            transform: translate(600%, 200%);
+        }
+        .marks5 {
+            position: absolute;
+            transform: translate(400%, 2200%);
+        }
+        .marks6 {
+            position: absolute;
+            transform: translate(150%, 200%);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="Lakshya_Logo.png" class="logo" width="7%" alt="">
+        <img src="dosel.png" class="dosel" width="9%" alt="">
+        <h1>Ministry Of Education's<br>Dashboard</h1>
+    </header>
+    <nav>
+        <div class="d1">Pre-Primary 1</div>
+        <div class="d2">Pre-Primary 2</div>
+        <div class="d3">Pre-Primary 3</div>
+        <div class="d4">Class 1</div>
+        <div class="d5">Class 2</div>
+        <div class="d6">Class 3</div>
+        <div class="d7">State / UT / District</div>
+        <div class="d8">Manage Schools</div>
+        <div class="d9">
+            <img src="moe.png" width="17px" alt="">
+            V
+        </div>
+    </nav>
+    <h2>Grpahical Representation</h2>
+    <div class="div4">
+        <div class="c1"><span class="per">77%</span><br><span class="skill">Literacy</span><br>Average Performance of Student in Personalized Assessment</div>
+        <div class="c2"><span class="per">65%</span><br><span class="skill">Numeracy</span><br>Average Performance of Student in Personalized Assessment</div>
+        <div class="c3"><span class="per">72%</span><br><span class="skill">Physical Education</span><br>Average Performance of Student in Personalized Assessment</div>
+        <div class="c4"><span class="per">68%</span><br><span class="skill">Cognitive and Psychomotor Skills</span><br>Average Performance of Student in Personalized Assessment</div>
+    </div>
+    <div class="space"></div>
+    <h3>1. PIE Chart</h3>
+    <h4 style="text-align: center; margin-bottom: 40px;">Performance of the Students</h4>
+    <div class="legpie">
+        <h4>Legend</h4>
+        <div class="color1"></div> -> Development Goal 1<br>
+        <div class="color2"></div> -> Development Goal 2<br>
+        <div class="color3"></div> -> Development Goal 3
+    </div>
+    <p class="marks1">87% (EVS)</p>
+    <p class="marks2">91% (Language)</p>
+    <p class="marks3">78% (Mathematics)</p>
+    <div class="piechart"></div>
+    <h3 style="margin-top: 80px;">2. BAR Chart</h3>
+    <div id="container" style="margin-left: 25%; width: 50%; height: 400px"></div>
+    <div class="space3"></div>
+    <h3>3. DOUGHNUT Chart</h3>
+    <h4 style="text-align: center; margin-bottom: 40px;">Assessment Pratices Used by Techers in the Class</h4>
+    <p class="marks4">95% (Students Self<br>Assessment)</p>
+    <p class="marks5">96% (Project Work)</p>
+    <p class="marks6">98% (Students practicing<br>reading individually)</p>
+    <div class="legpie">
+        <h4>Legend</h4>
+        <div class="color4"></div> -> Development Goal 1<br>
+        <div class="color5"></div> -> Development Goal 2<br>
+        <div class="color6"></div> -> Development Goal 3
+    </div>
+    <div class="douchart"></div>
+    <div class="space2"></div>
+    <br><br><br>
+    <script>
+        anychart.onDocumentReady(function() {
+   
+          // set the data
+          var data = {
+              header: ["Student", "Achivements"],
+              rows: [
+                ["Nursery", 306],
+                ["KG1", 284],
+                ["KG2", 255],
+                ["Class 1", 220],
+                ["Class 2", 200],
+                ["Class 3", 185]
+          ]};
+   
+          // create the chart
+          var chart = anychart.column();
+   
+          // add the data
+          chart.data(data);
+   
+          // set the chart title
+          chart.title("The Learning Outcomes covered per age group in Mathematics");
+   
+          // draw
+          chart.container("container");
+          chart.draw();
+        });
+      </script>
+</body>
+
+</html>
